@@ -11,6 +11,7 @@ function App() {
             <div key={post.id}>
               <h1> {post.title} </h1>
               <p> {post.socialHandle} </p>
+              <img src={post.imageUrl} />
             </div>
           );
         })}
