@@ -4,6 +4,9 @@ export const CardContainer = styled.div`
   width: 48%;
   background-color: #ffffff;
   margin-bottom: 40px;
+  @media (max-width: 991px) {
+    width: 100%;
+  }
   .banner {
     height: 100px;
     width: 100%;

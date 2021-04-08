@@ -12,8 +12,13 @@ export const NavContainer = styled.div`
     margin: auto;
     display: flex;
     @media (max-width: 991px) {
-      width: 90%;
+      width: 100%;
+      height: auto;
+      flex-wrap: wrap;
     }
+  }
+  @media (max-width: 991px) {
+    height: auto;
   }
 `;
 
@@ -22,6 +27,9 @@ export const Logo = styled.div`
   img {
     width: 112px;
     margin-top: 24px;
+  }
+  @media (max-width: 991px) {
+    width: 40%;
   }
 `;
 
@@ -55,6 +63,15 @@ export const Search = styled.div`
       border: none;
       background-color: transparent;
       cursor: pointer;
+    }
+  }
+  @media (max-width: 991px) {
+    width: 100%;
+    order: 1;
+    .input-wrapper {
+      width: 100%;
+      margin-top: 15px;
+      margin-bottom: 20px;
     }
   }
 `;
@@ -100,5 +117,9 @@ export const NotificationSection = styled.div`
         }
       }
     }
+  }
+  @media (max-width: 991px) {
+    width: 60%;
+    height: 65px;
   }
 `;

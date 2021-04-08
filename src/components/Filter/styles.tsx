@@ -5,6 +5,9 @@ export const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  @media (max-width: 991px) {
+    flex-wrap: wrap;
+  }
   .title {
     width: 40%;
     font-weight: 600;
@@ -12,6 +15,9 @@ export const FilterContainer = styled.div`
     line-height: 36px;
     letter-spacing: 0.1px;
     color: #171725;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
   }
   .filter-wrap {
     width: 40%;
@@ -19,10 +25,19 @@ export const FilterContainer = styled.div`
       margin: 0;
       padding: 0;
       text-align: right;
+      @media (max-width: 991px) {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
       li {
         display: inline-block;
         margin-left: 20px;
         vertical-align: middle;
+        @media (max-width: 991px) {
+          margin-right: 20px;
+          margin-left: 0;
+        }
         .search {
           width: 38px;
           height: 38px;
@@ -82,8 +97,19 @@ export const FilterContainer = styled.div`
         .filter-icon {
           display: inline-block;
           padding-top: 10px;
+          background-color: #ffffff;
+          border-radius: 7px;
+          display: inline-block;
+          text-align: center;
+          padding: 0 10px;
+          img {
+            margin-top: 9px;
+          }
         }
       }
+    }
+    @media (max-width: 991px) {
+      width: 100%;
     }
   }
 `;

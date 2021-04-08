@@ -25,6 +25,7 @@ export default createGlobalStyle`
     margin-top: 50px;
     @media (max-width: 991px) {
       width: 90%;
+      margin-top: 20px;
     }
   }
   a, button{

@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
         <Search>
           <div className="input-wrapper">
             <label>Search</label>
-            <input type="text" />
+            <input type="text" placeholder="Search" />
             <button>
               <img src="https://i.ibb.co/zRwwY4x/Vector.png" alt="icon" />
             </button>
