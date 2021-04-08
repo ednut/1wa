@@ -1,6 +1,5 @@
 import React from 'react';
 import { FilterContainer } from './styles';
-import Friends from '../../friendsList.json';
 
 const Cards: React.FC = () => {
   return (
