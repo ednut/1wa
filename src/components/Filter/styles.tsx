@@ -22,7 +22,7 @@ export const FilterContainer = styled.div`
       li {
         display: inline-block;
         margin-left: 20px;
-        vertical-align: bottom;
+        vertical-align: middle;
         .search {
           width: 38px;
           height: 38px;
@@ -41,6 +41,7 @@ export const FilterContainer = styled.div`
           background-color: #fff;
           border-radius: 10px;
           display: inline-block;
+          line-height: 35px;
           .sort-by {
             font-style: normal;
             font-weight: normal;
@@ -76,13 +77,11 @@ export const FilterContainer = styled.div`
             padding-left: 8px;
             display: inline-block;
             border-left: 3px solid #fafafb;
-            img {
-            }
           }
         }
         .filter-icon {
-          img {
-          }
+          display: inline-block;
+          padding-top: 10px;
         }
       }
     }
