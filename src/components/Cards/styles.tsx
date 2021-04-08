@@ -33,7 +33,7 @@ export const CardContainer = styled.div`
       }
     }
     .content {
-      width: 80%;
+      width: 100%;
       padding: 0 0 20px 20px;
       .title {
         display: flex;

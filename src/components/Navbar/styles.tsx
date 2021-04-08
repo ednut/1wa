@@ -37,6 +37,11 @@ export const Search = styled.div`
     display: flex;
     padding: 1px;
     margin-top: 21px;
+    position: relative;
+    label {
+      position: absolute;
+      top: -10000px;
+    }
     input {
       width: 90%;
       border: none;
