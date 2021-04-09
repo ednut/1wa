@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import GlobalStyle from './styles/global';
-import Navbar from './components/Navbar';
-import Friends from './components/Friends';
-import Details from './components/Details';
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import GlobalStyle from "./styles/global";
+import Navbar from "./components/Navbar";
+import Friends from "./components/Friends";
+import Details from "./components/Details";
 
 const App: React.FC = () => (
   <BrowserRouter>

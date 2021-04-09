@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const NavContainer = styled.div`
   width: 100%;
@@ -107,7 +107,7 @@ export const NotificationSection = styled.div`
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
-          background-image: url('https://i.ibb.co/vvZ4C4X/5.png');
+          background-image: url("https://i.ibb.co/vvZ4C4X/5.png");
         }
         img {
           width: auto;

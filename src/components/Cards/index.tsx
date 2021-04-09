@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { CardsContainer } from './styles';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { CardsContainer } from "./styles";
 
 export interface Friendsprops {}
 
@@ -18,7 +18,7 @@ const Cards: React.FC<Friendsprops> = () => {
 
   useEffect(() => {
     const getFriends = async () => {
-      let r = await fetch('/friendsList.json');
+      let r = await fetch("/friendsList.json");
       let name = await r.json();
       setFriends(name);
     };

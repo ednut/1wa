@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const CardsContainer = styled.div`
   width: 48%;
@@ -67,7 +67,7 @@ export const CardsContainer = styled.div`
         }
       }
       .handle {
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-weight: 400;
         letter-spacing: 0.1px;
         font-size: 14px;
@@ -76,7 +76,7 @@ export const CardsContainer = styled.div`
         margin-bottom: 5px;
       }
       .details {
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: normal;
         line-height: 26px;

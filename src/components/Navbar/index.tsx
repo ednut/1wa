@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { NavContainer, Logo, Search, NotificationSection } from './styles';
+import React from "react";
+import { Link } from "react-router-dom";
+import { NavContainer, Logo, Search, NotificationSection } from "./styles";
 
 const Navbar: React.FC = () => {
   return (
@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <div>
-                <span></span>{' '}
+                <span></span>{" "}
                 <img src="https://i.ibb.co/NTcnd5z/Rectangle.png" alt="arrow" />
               </div>
             </li>

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const FilterContainer = styled.div`
   margin-top: 0px;
@@ -63,7 +63,7 @@ export const FilterContainer = styled.div`
             font-size: 14px;
             line-height: 16px;
             letter-spacing: 0.1px;
-            font-family: 'Roboto', sans-serif;
+            font-family: "Roboto", sans-serif;
             color: #696974;
             font-weight: 400;
           }
@@ -81,7 +81,7 @@ export const FilterContainer = styled.div`
             -webkit-appearance: none;
             -moz-appearance: none;
             text-indent: 1px;
-            text-overflow: '';
+            text-overflow: "";
             padding-right: 10px;
             padding-left: 10px;
             &::-ms-expand {

@@ -1,5 +1,5 @@
-import React from 'react';
-import { FilterContainer } from './styles';
+import React from "react";
+import { FilterContainer } from "./styles";
 
 const Cards: React.FC = () => {
   return (
