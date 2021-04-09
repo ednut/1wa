@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { CardContainer } from "./styles";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { CardsContainer } from './styles';
 
-interface Friendsprops {}
+export interface Friendsprops {}
 
-export interface Friends {
-  id: number;
-  title: string;
-  socialHandle: string;
-  content: string;
-  bannerImage: string;
-  imageUrl: string;
+export interface Friend {
+  id: number | null;
+  title: string | null;
+  socialHandle: string | null;
+  content: string | null;
+  bannerImage: string | null;
+  imageUrl: string | null;
 }
 
 const Cards: React.FC<Friendsprops> = () => {
-  const [friends, setFriends] = useState<Friends[]>([]);
-
-  const getFriends = async () => {
-    let r = await fetch("friendsList.json");
-    let name = await r.json();
-    setFriends(name);
-  };
+  const [friends, setFriends] = useState<Friend[]>([]);
 
   useEffect(() => {
+    const getFriends = async () => {
+      let r = await fetch('/friendsList.json');
+      let name = await r.json();
+      setFriends(name);
+    };
     getFriends();
   }, []);
 
@@ -29,7 +29,7 @@ const Cards: React.FC<Friendsprops> = () => {
     <div className="container">
       {friends.map((friend) => {
         return (
-          <CardContainer key={friend.id}>
+          <CardsContainer key={friend.id}>
             <div
               className="banner"
               style={{ backgroundImage: `url( ${friend.bannerImage} )` }}
@@ -42,14 +42,16 @@ const Cards: React.FC<Friendsprops> = () => {
               </div>
               <div className="content">
                 <div className="title">
-                  <span>{friend.title}</span>
+                  <span>
+                    <Link to={`/${friend.id}/details`}>{friend.title}</Link>
+                  </span>
                   <button>Following</button>
                 </div>
                 <div className="handle"> {friend.socialHandle} </div>
                 <div className="details"> {friend.content} </div>
               </div>
             </div>
-          </CardContainer>
+          </CardsContainer>
         );
       })}
     </div>

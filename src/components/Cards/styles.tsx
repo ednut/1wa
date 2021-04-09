@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CardContainer = styled.div`
+export const CardsContainer = styled.div`
   width: 48%;
   background-color: #ffffff;
   margin-bottom: 40px;
@@ -42,6 +42,9 @@ export const CardContainer = styled.div`
         display: flex;
         justify-content: space-between;
         margin-bottom: 5px;
+        a {
+          color: #000;
+        }
         span {
           width: 70%;
           font-weight: 600;

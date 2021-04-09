@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { NavContainer, Logo, Search, NotificationSection } from './styles';
 
 const Navbar: React.FC = () => {
@@ -6,7 +7,9 @@ const Navbar: React.FC = () => {
     <NavContainer>
       <div className="wrapper">
         <Logo>
-          <img src="https://i.ibb.co/vz69cyv/Logo.png" alt="logo" />
+          <Link to={`/`}>
+            <img src="https://i.ibb.co/vz69cyv/Logo.png" alt="logo" />
+          </Link>
         </Logo>
         <Search>
           <div className="input-wrapper">
