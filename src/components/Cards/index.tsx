@@ -1,11 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { CardContainer } from './styles';
-import Friends from '../../friendsList.json';
 
-const Cards: React.FC = () => {
+interface Friendsprops {}
+
+export interface Friends {
+  id: number;
+  title: string;
+  socialHandle: string;
+  content: string;
+  bannerImage: string;
+  imageUrl: string;
+}
+
+const Cards: React.FC<Friendsprops> = () => {
+  const [friends, setFriends] = useState<Friends[]>([]);
+
+  const getFriends = async () => {
+    let r = await fetch('friendsList.json');
+    let name = await r.json();
+    setFriends(name);
+  };
+
+  useEffect(() => {
+    getFriends();
+  }, []);
+
   return (
     <div className="container">
-      {Friends.map((friend) => {
+      {friends.map((friend) => {
         return (
           <CardContainer key={friend.id}>
             <div
@@ -33,5 +55,4 @@ const Cards: React.FC = () => {
     </div>
   );
 };
-
 export default Cards;
