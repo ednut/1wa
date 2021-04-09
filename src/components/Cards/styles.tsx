@@ -45,7 +45,7 @@ export const CardsContainer = styled.div`
         a {
           color: #000;
         }
-        span {
+        span.link {
           width: 70%;
           font-weight: 600;
           font-size: 18px;

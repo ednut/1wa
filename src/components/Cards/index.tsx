@@ -42,8 +42,11 @@ const Cards: React.FC<Friendsprops> = () => {
               </div>
               <div className="content">
                 <div className="title">
-                  <span>
+                  <span className="link">
                     <Link to={`/${friend.id}/details`}>{friend.title}</Link>
+                  </span>
+                  <span className="icon">
+                    <i className="fa fa-star" aria-hidden="true"></i>
                   </span>
                   <button>Following</button>
                 </div>
