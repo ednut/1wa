@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { CardContainer } from './styles';
+import React, { useState, useEffect } from "react";
+import { CardContainer } from "./styles";
 
 interface Friendsprops {}
 
@@ -16,7 +16,7 @@ const Cards: React.FC<Friendsprops> = () => {
   const [friends, setFriends] = useState<Friends[]>([]);
 
   const getFriends = async () => {
-    let r = await fetch('friendsList.json');
+    let r = await fetch("friendsList.json");
     let name = await r.json();
     setFriends(name);
   };
