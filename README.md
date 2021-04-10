@@ -12,10 +12,6 @@ Start the development server
 
 `npx yarn start`
 
-## Testing
-
-`npx yarn test`
-
 ## Build app
 
 `npm run build`
