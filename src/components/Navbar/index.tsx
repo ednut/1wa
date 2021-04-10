@@ -31,7 +31,12 @@ const Navbar: React.FC = () => {
           <ul>
             <li className="language">
               <div className="check-button">
-                <input type="radio" name="changeLanguage" id="en" />
+                <input
+                  type="radio"
+                  defaultChecked
+                  name="changeLanguage"
+                  id="en"
+                />
                 <label onClick={changeLanguage("en")} htmlFor="en">
                   EN
                 </label>
