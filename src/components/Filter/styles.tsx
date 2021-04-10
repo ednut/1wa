@@ -21,7 +21,7 @@ export const FilterContainer = styled.div`
     }
   }
   .filter-wrap {
-    width: 40%;
+    width: 50%;
     ul {
       margin: 0;
       padding: 0;
