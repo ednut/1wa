@@ -1,11 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { FilterContainer } from "./styles";
 
 const Cards: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="container">
       <FilterContainer>
-        <div className="title">Friends List</div>
+        <div className="title">{t("friendList")}</div>
         <div className="filter-wrap">
           <ul>
             <li>
@@ -15,9 +17,9 @@ const Cards: React.FC = () => {
             </li>
             <li>
               <div className="filter">
-                <span className="sort-by">Sort by:</span>
+                <span className="sort-by">{t("sortBy")}:</span>
                 <select name="filter">
-                  <option>Newest Person</option>
+                  <option>{t("Newest")}</option>
                 </select>
                 <label htmlFor="filter" className="arrow-icon">
                   <img

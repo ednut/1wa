@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { CardsContainer } from "./styles";
 
 export interface Friendsprops {}
@@ -11,10 +12,15 @@ export interface Friend {
   content: string | null;
   bannerImage: string | null;
   imageUrl: string | null;
+  favorite: boolean | null;
 }
 
 const Cards: React.FC<Friendsprops> = () => {
   const [friends, setFriends] = useState<Friend[]>([]);
+
+  const setFavourite = (friend: object) => {
+    console.log(friend);
+  };
 
   useEffect(() => {
     const getFriends = async () => {
@@ -24,6 +30,8 @@ const Cards: React.FC<Friendsprops> = () => {
     };
     getFriends();
   }, []);
+
+  const { t } = useTranslation();
 
   return (
     <div className="container">
@@ -42,13 +50,13 @@ const Cards: React.FC<Friendsprops> = () => {
               </div>
               <div className="content">
                 <div className="title">
-                  <span className="link">
+                  <span className={`link ${friend.favorite ? "active" : ""}`}>
                     <Link to={`/${friend.id}/details`}>{friend.title}</Link>
                   </span>
-                  <span className="icon">
+                  <span className="icon" onClick={() => setFavourite(friend)}>
                     <i className="fa fa-star" aria-hidden="true"></i>
                   </span>
-                  <button>Following</button>
+                  <button>{t("Following")}</button>
                 </div>
                 <div className="handle"> {friend.socialHandle} </div>
                 <div className="details"> {friend.content} </div>

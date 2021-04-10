@@ -51,6 +51,25 @@ export const CardsContainer = styled.div`
           font-size: 18px;
           line-height: 27px;
         }
+        span.icon {
+          border: 1px solid #92929d82;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          text-align: center;
+          cursor: pointer;
+          i {
+            display: inline-block;
+            color: #92929d82;
+          }
+          &.active {
+            border: 1px solid gold;
+            i {
+              display: inline-block;
+              color: gold;
+            }
+          }
+        }
         button {
           width: 80px;
           mix-blend-mode: normal;

@@ -34,7 +34,7 @@ export const Logo = styled.div`
 `;
 
 export const Search = styled.div`
-  width: 60%;
+  width: 55%;
   .input-wrapper {
     background-color: #fafafb;
     width: 50%;
@@ -77,7 +77,7 @@ export const Search = styled.div`
 `;
 
 export const NotificationSection = styled.div`
-  width: 20%;
+  width: 25%;
   line-height: 80px;
   ul {
     margin: 0;
@@ -114,6 +114,28 @@ export const NotificationSection = styled.div`
           height: 7px;
           margin-top: 15px;
           margin-left: 4px;
+        }
+      }
+      &.language {
+        margin-right: 20px;
+        .check-button {
+          display: inline-block;
+          margin-left: 0;
+          vertical-align: super;
+          label {
+            background-color: #92929d40;
+            padding: 2px 7px;
+            color: #999;
+            font-size: 14px;
+            cursor: pointer;
+          }
+          input {
+            display: none;
+          }
+          input[type="radio"]:checked + label {
+            background-color: #0877ff;
+            color: #fff;
+          }
         }
       }
     }

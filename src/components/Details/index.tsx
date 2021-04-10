@@ -17,6 +17,7 @@ const Details: React.FunctionComponent<DetailsProps> = ({
     content: null,
     bannerImage: null,
     imageUrl: null,
+    favorite: null,
   });
 
   useEffect(() => {

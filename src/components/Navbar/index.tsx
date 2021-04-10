@@ -1,6 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import i18n from "../../i18n";
 import { NavContainer, Logo, Search, NotificationSection } from "./styles";
+
+const changeLanguage = (ln: string) => {
+  return () => {
+    i18n.changeLanguage(ln);
+  };
+};
 
 const Navbar: React.FC = () => {
   return (
@@ -22,6 +29,20 @@ const Navbar: React.FC = () => {
         </Search>
         <NotificationSection>
           <ul>
+            <li className="language">
+              <div className="check-button">
+                <input type="radio" name="changeLanguage" id="en" />
+                <label onClick={changeLanguage("en")} htmlFor="en">
+                  EN
+                </label>
+              </div>
+              <div className="check-button">
+                <input type="radio" name="changeLanguage" id="fr" />
+                <label onClick={changeLanguage("fr")} htmlFor="fr">
+                  FR
+                </label>
+              </div>
+            </li>
             <li>
               <img
                 src="https://i.ibb.co/VtcwFqk/Combined-Shape.png"

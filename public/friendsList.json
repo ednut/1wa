@@ -5,7 +5,8 @@
     "socialHandle": "@maymayke",
     "content": "Not a Man but a Ghost 👻",
     "bannerImage": "https://i.ibb.co/PFkFRJV/1.jpg",
-    "imageUrl": "https://i.ibb.co/YDXkJb5/ibnu.png"
+    "imageUrl": "https://i.ibb.co/YDXkJb5/ibnu.png",
+    "favorite": false
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "socialHandle": "@tatay",
     "content": "Interaction Designer | Coffe Addict | Part time Traveller | Full time Mom of Baby and Bayi.",
     "bannerImage": "https://i.ibb.co/pr9QMt7/2.jpg",
-    "imageUrl": "https://i.ibb.co/g6SG25x/patya.png"
+    "imageUrl": "https://i.ibb.co/g6SG25x/patya.png",
+    "favorite": false
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "socialHandle": "@ngohaitong",
     "content": "Pushing pixels and experiences in digital products for onetwothree | Coffee(nosugar)",
     "bannerImage": "https://i.ibb.co/N9LH3q6/3.jpg",
-    "imageUrl": "https://i.ibb.co/0Q0L4Hj/yogie.png"
+    "imageUrl": "https://i.ibb.co/0Q0L4Hj/yogie.png",
+    "favorite": false
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "socialHandle": "@chinezeulala",
     "content": "Youtube Content Creator | Photography | Profesional Videographer",
     "bannerImage": "https://i.ibb.co/6n985Yb/4.jpg",
-    "imageUrl": "https://i.ibb.co/bRQyDjM/kelen.png"
+    "imageUrl": "https://i.ibb.co/bRQyDjM/kelen.png",
+    "favorite": false
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "socialHandle": "@Xianzon",
     "content": "Life is a Choice baby :)",
     "bannerImage": "https://i.ibb.co/vXPts66/5.jpg",
-    "imageUrl": "https://i.ibb.co/MD4PY0Q/kukuh.png"
+    "imageUrl": "https://i.ibb.co/MD4PY0Q/kukuh.png",
+    "favorite": true
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "socialHandle": "@anjedrive",
     "content": "Not a Man but a Ghost 👻",
     "bannerImage": "https://i.ibb.co/pZ8DvHW/6.jpg",
-    "imageUrl": "https://i.ibb.co/2KtjRfz/avian.png"
+    "imageUrl": "https://i.ibb.co/2KtjRfz/avian.png",
+    "favorite": false
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "socialHandle": "@njipanji",
     "content": "Life is a Choice baby :)",
     "bannerImage": "https://i.ibb.co/MB6MbKV/7.jpg",
-    "imageUrl": "https://i.ibb.co/8mRfYmr/indro.png"
+    "imageUrl": "https://i.ibb.co/8mRfYmr/indro.png",
+    "favorite": false
   },
   {
     "id": 8,
@@ -61,6 +68,7 @@
     "socialHandle": "@isaachunt",
     "content": "Not a Man but a Ghost 👻",
     "bannerImage": "https://i.ibb.co/mB14sfX/8.jpg",
-    "imageUrl": "https://i.ibb.co/gM3hw3V/geovani.png"
+    "imageUrl": "https://i.ibb.co/gM3hw3V/geovani.png",
+    "favorite": false
   }
 ]
