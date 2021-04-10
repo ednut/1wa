@@ -42,6 +42,8 @@ Use React hooks to load up the friends data
 
 Ensure the application is responsive across form factors
 
+Add a language localization switcher with 2 languages on app header
+
 Install a UI component via npm package
 
 Put the code on GitHub and use a proper README file

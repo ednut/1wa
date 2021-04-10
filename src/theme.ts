@@ -54,3 +54,8 @@ export const filterBg: theme.ThemeSet = theme("mode", {
   light: "#fff",
   dark: "#292932",
 });
+
+export const tittleColor: theme.ThemeSet = theme("mode", {
+  light: "#171725",
+  dark: "#fff",
+});
