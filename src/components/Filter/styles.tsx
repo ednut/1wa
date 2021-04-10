@@ -15,13 +15,13 @@ export const FilterContainer = styled.div`
     font-size: 24px;
     line-height: 36px;
     letter-spacing: 0.1px;
-    color: #171725;
+    color: ${themeConf.tittleColor};
     @media (max-width: 991px) {
       width: 100%;
     }
   }
   .filter-wrap {
-    width: 40%;
+    width: 50%;
     ul {
       margin: 0;
       padding: 0;

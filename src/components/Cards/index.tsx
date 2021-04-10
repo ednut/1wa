@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { CardsContainer } from "./styles";
+import { getIntialState, persistState } from "../../util";
 
 export interface Friendsprops {}
 
@@ -17,8 +18,13 @@ export interface Friend {
 
 const Cards: React.FC<Friendsprops> = () => {
   const [friends, setFriends] = useState<Friend[]>([]);
+  const [favorite, setFavorite] = useState<number[]>(
+    getIntialState("friends") || []
+  );
 
-  const setFavourite = (friend: object) => {};
+  const getFavourite = (friend: number) => {
+    setFavorite((prev) => [...prev, friend]);
+  };
 
   useEffect(() => {
     const getFriends = async () => {
@@ -28,6 +34,10 @@ const Cards: React.FC<Friendsprops> = () => {
     };
     getFriends();
   }, []);
+
+  useEffect(() => {
+    persistState("friends", favorite);
+  }, [favorite.length]);
 
   const { t } = useTranslation();
 
@@ -54,7 +64,12 @@ const Cards: React.FC<Friendsprops> = () => {
                   <span className={`link ${friend.favorite ? "active" : ""}`}>
                     <Link to={`/${friend.id}/details`}>{friend.title}</Link>
                   </span>
-                  <span className="icon" onClick={() => setFavourite(friend)}>
+                  <span
+                    className={`icon ${
+                      friend.id && favorite.includes(friend.id) ? "active" : ""
+                    }`}
+                    onClick={() => friend.id && getFavourite(friend.id)}
+                  >
                     <i className="fa fa-star" aria-hidden="true"></i>
                   </span>
                   <button>{t("Following")}</button>

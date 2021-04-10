@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import * as themeConf from "../../theme";
 
 export const DetailsContainer = styled.div`
   width: 100;
   height: 90vh;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: ${themeConf.cardBg};
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -25,6 +26,7 @@ export const DetailsContainer = styled.div`
       font-size: 40px;
       line-height: 43px;
       margin-bottom: 10px;
+      color: ${themeConf.cardText};
     }
     .handle {
       font-family: "Roboto", sans-serif;
@@ -41,7 +43,7 @@ export const DetailsContainer = styled.div`
       font-weight: normal;
       line-height: 26px;
       letter-spacing: 0.1px;
-      color: #44444f;
+      color: ${themeConf.cardDetailsText};
       margin-top: 13px;
       font-size: 20px;
     }
