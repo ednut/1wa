@@ -18,9 +18,7 @@ export interface Friend {
 const Cards: React.FC<Friendsprops> = () => {
   const [friends, setFriends] = useState<Friend[]>([]);
 
-  const setFavourite = (friend: object) => {
-    console.log(friend);
-  };
+  const setFavourite = (friend: object) => {};
 
   useEffect(() => {
     const getFriends = async () => {
@@ -44,9 +42,12 @@ const Cards: React.FC<Friendsprops> = () => {
             ></div>
             <div className="cont-wrap">
               <div className="avata">
-                <span
-                  style={{ backgroundImage: `url( ${friend.imageUrl} )` }}
-                ></span>
+                <Link to={`/${friend.id}/details`}>
+                  {" "}
+                  <span
+                    style={{ backgroundImage: `url( ${friend.imageUrl} )` }}
+                  ></span>
+                </Link>
               </div>
               <div className="content">
                 <div className="title">
