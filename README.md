@@ -26,7 +26,7 @@ https://cocky-pare-f74a31.netlify.app/
 
 ## Link to App perfomance evaluation
 
-https://googlechrome.github.io/lighthouse/viewer/?gist=607b380af5fdc757d9d6f7c0c0bee4f7
+https://googlechrome.github.io/lighthouse/viewer/?gist=c0b2bbbb3434a909de3465206085a58f
 
 ## Requirements Met
 
