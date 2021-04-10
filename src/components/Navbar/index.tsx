@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import i18n from "../../i18n";
+import { useTheme } from "../../ThemeManager";
 import { NavContainer, Logo, Search, NotificationSection } from "./styles";
 
 const changeLanguage = (ln: string) => {
@@ -10,12 +11,17 @@ const changeLanguage = (ln: string) => {
 };
 
 const Navbar: React.FC = () => {
+  const theme = useTheme();
   return (
     <NavContainer>
       <div className="wrapper">
         <Logo>
           <Link to={`/`}>
-            <img src="https://i.ibb.co/vz69cyv/Logo.png" alt="logo" />
+            {theme.mode === "dark" ? (
+              <img src="https://i.ibb.co/wz1vtLL/Logo.png" alt="logo" />
+            ) : (
+              <img src="https://i.ibb.co/vz69cyv/Logo.png" alt="logo" />
+            )}
           </Link>
         </Logo>
         <Search>
@@ -29,6 +35,30 @@ const Navbar: React.FC = () => {
         </Search>
         <NotificationSection>
           <ul>
+            <li className="mode-change">
+              <div className="check-button">
+                <input type="checkbox" name="changemode" id="mode" />
+                <label
+                  className={`${theme.mode === "dark" ? "colored" : ""}`}
+                  onClick={() => theme.toggle()}
+                  htmlFor="mode"
+                >
+                  {theme.mode === "dark" ? (
+                    <i
+                      className="fa fa-moon-o"
+                      title="Dark"
+                      aria-hidden="true"
+                    ></i>
+                  ) : (
+                    <i
+                      className="fa fa-sun-o"
+                      title="Light"
+                      aria-hidden="true"
+                    ></i>
+                  )}
+                </label>
+              </div>
+            </li>
             <li className="language">
               <div className="check-button">
                 <input
@@ -37,13 +67,21 @@ const Navbar: React.FC = () => {
                   name="changeLanguage"
                   id="en"
                 />
-                <label onClick={changeLanguage("en")} htmlFor="en">
+                <label
+                  className="first"
+                  onClick={changeLanguage("en")}
+                  htmlFor="en"
+                >
                   EN
                 </label>
               </div>
               <div className="check-button">
                 <input type="radio" name="changeLanguage" id="fr" />
-                <label onClick={changeLanguage("fr")} htmlFor="fr">
+                <label
+                  className="second"
+                  onClick={changeLanguage("fr")}
+                  htmlFor="fr"
+                >
                   FR
                 </label>
               </div>

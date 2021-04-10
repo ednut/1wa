@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import * as themeConf from "../../theme";
 
 export const CardsContainer = styled.div`
   width: 48%;
-  background-color: #ffffff;
+  background-color: ${themeConf.cardBg};
+  border-radius: 15px;
   margin-bottom: 40px;
   @media (max-width: 991px) {
     width: 100%;
@@ -43,7 +45,7 @@ export const CardsContainer = styled.div`
         justify-content: space-between;
         margin-bottom: 5px;
         a {
-          color: #000;
+          color: ${themeConf.cardText};
         }
         span.link {
           width: 70%;
@@ -73,12 +75,12 @@ export const CardsContainer = styled.div`
         button {
           width: 80px;
           mix-blend-mode: normal;
-          opacity: 0.5;
-          border: 1px solid #0062ff;
+          border: 1px solid #fff;
           box-sizing: border-box;
           border-radius: 10px;
-          color: #0062ff;
+          color: ${themeConf.cardBtnText};
           cursor: pointer;
+          background: ${themeConf.cardBtn};
           &.active {
             background: #0062ff;
             color: #fff;
@@ -100,7 +102,7 @@ export const CardsContainer = styled.div`
         font-weight: normal;
         line-height: 26px;
         letter-spacing: 0.1px;
-        color: #44444f;
+        color: ${themeConf.cardDetailsText};
       }
     }
   }

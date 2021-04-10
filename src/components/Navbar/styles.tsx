@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import * as themeConf from "../../theme";
 
 export const NavContainer = styled.div`
   width: 100%;
   height: 80px;
-  background-color: #ffffff;
-  box-shadow: inset 0px -1px 0px #e2e2ea;
+  background-color: ${themeConf.backgroundColor};
+  box-shadow: ${themeConf.boxShadow};
   padding: 0 20px;
   .wrapper {
     width: 90%;
@@ -29,17 +30,17 @@ export const Logo = styled.div`
     margin-top: 24px;
   }
   @media (max-width: 991px) {
-    width: 40%;
+    width: 100%;
   }
 `;
 
 export const Search = styled.div`
-  width: 55%;
+  width: 50%;
   .input-wrapper {
-    background-color: #fafafb;
-    width: 50%;
+    background-color: ${themeConf.inputBg};
+    width: 60%;
     height: 37px;
-    border: 1px solid #f1f1f5;
+    border: 1px solid ${themeConf.inputBorder};
     box-sizing: border-box;
     border-radius: 15px;
     display: flex;
@@ -77,7 +78,7 @@ export const Search = styled.div`
 `;
 
 export const NotificationSection = styled.div`
-  width: 25%;
+  width: 30%;
   line-height: 80px;
   ul {
     margin: 0;
@@ -128,6 +129,12 @@ export const NotificationSection = styled.div`
             color: #999;
             font-size: 14px;
             cursor: pointer;
+            &.first {
+              border-radius: 4px 0 0 4px;
+            }
+            &.second {
+              border-radius: 0 4px 4px 0;
+            }
           }
           input {
             display: none;
@@ -138,10 +145,40 @@ export const NotificationSection = styled.div`
           }
         }
       }
+      &.mode-change {
+        margin-right: 20px;
+        .check-button {
+          display: inline-block;
+          margin-left: 0;
+          vertical-align: super;
+          label {
+            background-color: #92929d40;
+            padding: 2px 7px;
+            color: #999;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            &.colored {
+              background-color: #0877ff;
+              color: #fff;
+            }
+          }
+          input {
+            display: none;
+          }
+          input[type="checkbox"]:checked + label {
+            color: #fff;
+          }
+        }
+      }
     }
   }
   @media (max-width: 991px) {
-    width: 60%;
-    height: 65px;
+    width: 100%;
+    height: 54px;
+    margin-top: -20px;
+    ul {
+      text-align: left;
+    }
   }
 `;

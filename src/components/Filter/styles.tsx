@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as themeConf from "../../theme";
 
 export const FilterContainer = styled.div`
   margin-top: 0px;
@@ -41,7 +42,7 @@ export const FilterContainer = styled.div`
         .search {
           width: 38px;
           height: 38px;
-          background-color: #fff;
+          background-color: ${themeConf.filterBg};
           border-radius: 10px;
           display: inline-block;
           text-align: center;
@@ -53,7 +54,7 @@ export const FilterContainer = styled.div`
           width: auto;
           padding: 0 10px;
           height: 38px;
-          background-color: #fff;
+          background-color: ${themeConf.filterBg};
           border-radius: 10px;
           display: inline-block;
           line-height: 35px;
@@ -84,6 +85,7 @@ export const FilterContainer = styled.div`
             text-overflow: "";
             padding-right: 10px;
             padding-left: 10px;
+            background-color: transparent;
             &::-ms-expand {
               display: none;
             }
@@ -91,13 +93,13 @@ export const FilterContainer = styled.div`
           .arrow-icon {
             padding-left: 8px;
             display: inline-block;
-            border-left: 3px solid #fafafb;
+            border-left: 1px solid ${themeConf.inputBorder};
           }
         }
         .filter-icon {
           display: inline-block;
           padding-top: 10px;
-          background-color: #ffffff;
+          background-color: ${themeConf.filterBg};
           border-radius: 7px;
           display: inline-block;
           text-align: center;

@@ -1,10 +1,10 @@
-import React from "react";
 import ReactDOM from "react-dom";
+import { ThemeManager } from "./ThemeManager";
 import App from "./App";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ThemeManager>
     <App />
-  </React.StrictMode>,
+  </ThemeManager>,
   document.getElementById("root")
 );
