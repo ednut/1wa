@@ -37,7 +37,7 @@ const Cards: React.FC<Friendsprops> = () => {
 
   useEffect(() => {
     persistState("friends", favorite);
-  }, [favorite.length]);
+  }, [favorite]);
 
   const { t } = useTranslation();
 
