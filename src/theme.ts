@@ -26,7 +26,7 @@ export const inputBorder: theme.ThemeSet = theme("mode", {
 });
 
 export const cardBg: theme.ThemeSet = theme("mode", {
-  light: "#fafafb",
+  light: "#ffffff",
   dark: "#292932",
 });
 
